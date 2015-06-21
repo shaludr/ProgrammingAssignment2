@@ -18,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-## Write a short comment describing this function
+
+## CacheSolve will get inverse of the matrix
 
 cacheSolve <- function(x) {
   invMatrix <- x$getinverse()
@@ -31,3 +32,22 @@ cacheSolve <- function(x) {
   x$setinverse(invMatrix)
   invMatrix
 }
+
+
+
+##sample code to show the inverse matrix works
+## m <- makeCacheMatrix()
+## y <- rbind(c(1,2),c(4,5))
+## m$set(y)
+# cacheSolve(m) 
+# This will give the result:
+#[,1]       [,2]
+#[1,] -1.666667  0.6666667
+#[2,]  1.333333 -0.3333333
+# THis yields the same result and proves that we can get the inverse of a matrix
+#m$getinverse()
+#[,1]       [,2]
+#[1,] -1.666667  0.6666667
+#[2,]  1.333333 -0.3333333
+
+
